@@ -11,3 +11,7 @@ sudo apt-get install -y libffi-dev
 
 wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
 tar xvfz Python-3.7.9.tgz
+cd Python-3.7.9
+./configure
+make
+sudo make install
