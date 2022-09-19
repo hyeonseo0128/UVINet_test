@@ -1,0 +1,1 @@
+gst-launch-1.0 rtspsrc location=rtsp://172.30.100.102:8554/mystream drop-on-latency=true use-pipeline-clock=true do-retransmission=false latency=0 ! rtph264depay ! h264parse ! avdec_h264 ! autovideosink sync=true
