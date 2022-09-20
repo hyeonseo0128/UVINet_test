@@ -9,3 +9,5 @@ sudo mkdir /etc/mavlink-router
 sudo cp main.conf /etc/mavlink-router
 
 cp runUDPMav.js /home/keti/
+pm2 start /home/keti/runUDPMav.js --name MavUDP
+pm2 save
