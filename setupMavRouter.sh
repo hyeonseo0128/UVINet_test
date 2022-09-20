@@ -8,4 +8,4 @@ sudo systemctl disable nvgetty.service
 sudo mkdir /etc/mavlink-router
 sudo cp main.conf /etc/mavlink-router
 
-cp runUDPMav.js
+cp runUDPMav.js /home/keti/
