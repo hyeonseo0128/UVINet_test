@@ -1,6 +1,6 @@
 const { exec, spawn } = require("child_process");
 
-let runRtspServer = exec("gst-launch-1.0 v4l2src device=/dev/video0 ! queue2 ! c.sink_0 v4l2src device=/dev/video1 ! queue2 ! c.sink_1 imxg2dcompositor name=c background-color=0x223344 sink_0::xpos=0 sink_0::ypos=0 sink_0::width=400 sink_0::height=300 sink_0::fill_color=0x00000000 sink_1::xpos=400 sink_1::ypos=0 sink_1::width=400 sink_1::height=300 sink_1::fill_color=0x11111111 queue2 ! video/x-raw, width=800, height=600 ! rtmpsink location='rtmp://localhost:1935/mystream live=1'");
+let runRtspServer = exec("gst-launch-1.0 -e nvcompositor name=comp sink_0::alpha=1 sink_0::xpos=0 sink_0::ypos=0 sink_1::alpha=1 sink_1::xpos=0 sink_1::ypos=1080 ! nvoverlaysink display-id=1 rtspsrc location=rtsp://172.30.82.109:8554/mystream ! matroskademux  name=demux0 demux0.video_0! h264parse ! omxh264dec ! nvvidconv ! comp.sink_0 rtspsrc location=rtsp://172.30.82.109:8554/mystream1 ! matroskademux  name=demux1 demux1.video_0! h264parse ! omxh264dec ! nvvidconv ! comp.sink_1 ");
 
 runRtspServer.stdout.on("data", function(data) {
   console.log(data.toString());
