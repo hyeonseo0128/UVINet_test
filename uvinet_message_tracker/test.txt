@@ -1,0 +1,72 @@
+parsing
+b'aa553e530502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>S\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 83 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 83, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
+parsing
+b'aa553e540502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>T\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 84 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 84, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
+parsing
+b'aa553e550502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>U\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 85 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 85, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
+parsing
+b'aa553e560502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>V\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 86 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 86, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
+parsing
+b'aa553e570502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>W\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 87 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 87, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
+parsing
+b'aa553e580502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>X\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 88 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 88, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
+parsing
+b'aa553e590502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>Y\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 89 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 89, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
+parsing
+b'aa553e5a0502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>Z\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 90 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 90, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
+parsing
+b'aa553e5b0502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>[\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 91 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 91, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
+parsing
+b'aa553e5c0502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>\\\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 92 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 92, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
+parsing
+b'aa553e5d0502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>]\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 93 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 93, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
+parsing
+b'aa553e5e0502010100c95445526a6866646b736c68666b646a686b736164686b6c6577696f756f726a776c00000000000000000000000000000000000c29'
+b'\xaaU>^\x05\x02\x01\x01\x00\xc9TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x0c)'
+header1 b'\xaa' header2 b'U' payload length 62 packet sequence 94 source ID 5 port 2 destination ID 1 port 1 packet priority 0 message ID 201
+(b'\xaa', b'U', 62, 94, 5, 2, 1, 1, 0, 201, b'TERjhfdkslhfkdjhksadhklewiouorjwl\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 12, 41)
+No, key: '1' does not exists in dictionary
