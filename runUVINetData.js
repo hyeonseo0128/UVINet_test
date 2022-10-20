@@ -1,6 +1,6 @@
 const { exec, spawn } = require("child_process");
 
-let runRtspServer = exec("python3 Kuvinet_message_tacker_net.py");
+let runRtspServer = exec("python3 /uvinet_message_tracker/Kuvinet_message_tacker_net.py");
 
 runRtspServer.stdout.on("data", function(data) {
   console.log(data.toString());
