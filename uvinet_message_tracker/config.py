@@ -1,0 +1,16 @@
+import json
+
+Config = {}
+ID = {}
+IP = {}
+
+
+ID["MY_ID"] = 8
+
+IP["MY_IP_ADDRESS"] = '172.30.100.102'
+IP["BCAST_IP_ADDRESS"] = '172.30.100.255'
+IP["BCAST_PORT_NUMBER"] = 20001
+
+IP["BCAST_PORT_NUMBER"] = 20001
+IP["BCAST_PORT_NUMBER"] = 20001
+

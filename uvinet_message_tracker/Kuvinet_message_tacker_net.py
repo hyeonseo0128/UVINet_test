@@ -8,6 +8,7 @@ import serial
 from struct import *
 import binascii
 import time
+import config
 
 
 logging.basicConfig(
@@ -17,20 +18,21 @@ logging.basicConfig(
 )
 
 
-MY_ID = 8
-#MY_IP_ADDRESS = '172.30.100.102'
-MY_IP_ADDRESS = ni.ifaddresses('eth0')[ni.AF_INET][0]['addr']
+MY_ID = config.ID["MY_ID"]
+MY_IP_ADDRESS = config.IP['MY_IP_ADDRESS']
+# MY_IP_ADDRESS = ni.ifaddresses('eth0')[ni.AF_INET][0]['addr']
 
-node_info = [0, MY_ID, MY_IP_ADDRESS]  # seqno, myid, myipaddress
-neighbor_dict = {}
-id_ip_dict = {MY_ID : MY_IP_ADDRESS}
+# node_info = [0, MY_ID, MY_IP_ADDRESS]  # seqno, myid, myipaddress
+# neighbor_dict = {}
+# id_ip_dict = {MY_ID : MY_IP_ADDRESS}
 
-BCAST_PORT_NUMBER = 20001
-#BCAST_IP_ADDRESS = '172.30.100.255'
-BCAST_IP_ADDRESS = ni.ifaddresses('eth0')[ni.AF_INET][0]['broadcast']
 
-UCAST_PORT_NUMBER = 20002
+BCAST_IP_ADDRESS = config.IP['BCAST_IP_ADDRESS']
+BCAST_PORT_NUMBER = config.IP['BCAST_PORT_NUMBER']
+# BCAST_IP_ADDRESS = ni.ifaddresses('eth0')[ni.AF_INET][0]['broadcast']
+
 UCAST_IP_ADDRESS = '172.30.100.101'
+UCAST_PORT_NUMBER = 20002
 
 ID_IP_SERVER_PORT_NUMBER = 20003
 ID_IP_SERVER_IP_ADDRESS = '172.30.100.101'
@@ -39,11 +41,10 @@ BMSG_PORT_NUMBER = 20004
 
 bcast_send_socket = socket(family=AF_INET, type=SOCK_DGRAM)
 bcast_send_socket.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
+print("------------------------------------------------------")
+print(bcast_send_socket)
+print("------------------------------------------------------")
 
-bcast_recv_socket = socket(family=AF_INET, type=SOCK_DGRAM)
-bcast_recv_socket.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
-
-bcast_recv_socket.bind(('', BCAST_PORT_NUMBER))
 
 bmsg_recv_socket = socket(family=AF_INET, type=SOCK_DGRAM)
 bmsg_recv_socket.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
@@ -168,90 +169,6 @@ def bmsg_receiver():
 bmsg_recv_thread = threading.Thread(target=bmsg_receiver)
 bmsg_recv_thread.start()
 
-
-
-def bcast_receiver():
-    while True:
-        msg, addr = bcast_recv_socket.recvfrom(1024)
-        if addr[0] == MY_IP_ADDRESS:
-            logging.debug("bcast my ip address")
-        else:
-            logging.debug("bcast other ip address")
-
-        received_node_info = pickle.loads(msg)
-        logging.info(received_node_info)
-        neighbor_dict[received_node_info[1]] = [received_node_info[2], int(time.time())]
-        logging.info('neighbor table {}'.format(neighbor_dict))
-
-
-def bcast_sender():
-    count = 0
-    while True:
-        time.sleep(1)
-        count = count + 1
-        node_info[0] = count
-        my_info_data = pickle.dumps(node_info)
-        bcast_send_socket.sendto(my_info_data, (BCAST_IP_ADDRESS, BCAST_PORT_NUMBER))
-
-
-#bcast_recv_thread = threading.Thread(target=bcast_receiver)
-#bcast_recv_thread.start()
-
-#bcast_send_thread = threading.Thread(target=bcast_sender)
-#bcast_send_thread.start()
-
-neighbor_time_counter = 0
-
-
-def runTimer():
-    global neighbor_time_counter
-    neighbor_time_counter = neighbor_time_counter + 1
-    logging.debug('Neighbor Table Check Timer {}'.format(neighbor_time_counter))
-    current_time = int(time.time())
-
-    for key, val in list(neighbor_dict.items()):
-        last_see_time = val[1]
-        if current_time - last_see_time > 5:
-            del neighbor_dict[key]
-
-    timer = threading.Timer(5, runTimer)
-    timer.start()
-
-#runTimer()
-
-
-#
-# def bcast_receiver():
-#     count = 0
-#     while True:
-#         msg, addr = bcast_recv_socket.recvfrom(1024)
-#         if addr[0] == MY_IP_ADDRESS:
-#             logging.debug("bcast my ip address")
-#             continue
-#         else:
-#             logging.debug("bcast other ip address")
-#
-#         logging.debug('----recv---- {0} {1} {2}'.format(count, msg.decode(), addr))
-#         count = count + 1
-#
-#
-# def bcast_sender():
-#     message = ['hi any business owner knows','this is good']
-#     for k in range(10000):
-#         time.sleep(1)
-#         for i in range(1):
-#             logging.debug('Sending.. Message {0}'.format(message[i]))
-#             bcast_send_socket.sendto(message[i].encode(), (BCAST_IP_ADDRESS, BCAST_PORT_NUMBER))
-#
-#
-# bcast_recv_thread = threading.Thread(target=bcast_receiver)
-# bcast_recv_thread.start()
-#
-# bcast_send_thread = threading.Thread(target=bcast_sender)
-# bcast_send_thread.start()
-
-
-
 def ucast_receiver():
     count = 0
     while True:
@@ -278,10 +195,6 @@ def ucast_sender(message, ip_address):
 
 ucast_recv_thread = threading.Thread(target=ucast_receiver)
 ucast_recv_thread.start()
-
-# ucast_send_thread = threading.Thread(target=ucast_sender)
-# ucast_send_thread.start()
-
 
 def id_ip_client():
     count = 0
