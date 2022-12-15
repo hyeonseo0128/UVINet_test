@@ -3,6 +3,7 @@ import json
 Config = {}
 ID = {}
 IP = {}
+Serial = {}
 
 
 ID["MY_ID"] = 8
@@ -11,6 +12,14 @@ IP["MY_IP_ADDRESS"] = '172.30.100.102'
 IP["BCAST_IP_ADDRESS"] = '172.30.100.255'
 IP["BCAST_PORT_NUMBER"] = 20001
 
-IP["BCAST_PORT_NUMBER"] = 20001
-IP["BCAST_PORT_NUMBER"] = 20001
+IP["UCAST_IP_ADDRESS"] = '172.30.100.101'
+IP["UCAST_PORT_NUMBER"] = 20002
 
+IP["ID_IP_SERVER_PORT_NUMBER"] = '172.30.100.101'
+IP["ID_IP_SERVER_IP_ADDRESS"] = 20003
+
+IP["BMSG_PORT_NUMBER"] = 20004
+
+Serial["Path"] = '/dev/ttyTHS1'
+Serial["Baud"] = 115200
+Serial["timeout"] = 0

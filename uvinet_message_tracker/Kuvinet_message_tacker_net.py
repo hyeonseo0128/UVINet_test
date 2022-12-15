@@ -31,13 +31,13 @@ BCAST_IP_ADDRESS = config.IP['BCAST_IP_ADDRESS']
 BCAST_PORT_NUMBER = config.IP['BCAST_PORT_NUMBER']
 # BCAST_IP_ADDRESS = ni.ifaddresses('eth0')[ni.AF_INET][0]['broadcast']
 
-UCAST_IP_ADDRESS = '172.30.100.101'
-UCAST_PORT_NUMBER = 20002
+UCAST_IP_ADDRESS = config.IP['UCAST_IP_ADDRESS']
+UCAST_PORT_NUMBER = config.IP['UCAST_PORT_NUMBER']
 
-ID_IP_SERVER_PORT_NUMBER = 20003
-ID_IP_SERVER_IP_ADDRESS = '172.30.100.101'
+ID_IP_SERVER_IP_ADDRESS = config.IP['ID_IP_SERVER_IP_ADDRESS']
+ID_IP_SERVER_PORT_NUMBER = config.IP['ID_IP_SERVER_PORT_NUMBER']
 
-BMSG_PORT_NUMBER = 20004
+BMSG_PORT_NUMBER = config.IP['BMSG_PORT_NUMBER']
 
 bcast_send_socket = socket(family=AF_INET, type=SOCK_DGRAM)
 bcast_send_socket.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
@@ -64,7 +64,7 @@ id_ip_server_socket.bind(('', ID_IP_SERVER_PORT_NUMBER))
 
 
 #ser = serial.Serial('/dev/ttyTHS1', 57600, timeout=0)
-ser = serial.Serial('/dev/ttyTHS1', 115200, timeout=0)
+ser = serial.Serial(config.Serial['Path'], config.Serial['Baud'], timeout=config.Serial['Timeout'])
 
 def serial_data_reader():
     #ser = serial.Serial('/dev/ttyTHS1', 57600, timeout=0)
@@ -146,8 +146,6 @@ def serial_data_reader():
                                         except Exception as e:
                                             print(e)
                                             continue
-
-
 
 
 serial_dl_thread = threading.Thread(target=serial_data_reader)
