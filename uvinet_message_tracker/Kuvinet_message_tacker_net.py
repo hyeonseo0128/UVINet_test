@@ -22,9 +22,9 @@ MY_ID = config.ID["MY_ID"]
 MY_IP_ADDRESS = config.IP['MY_IP_ADDRESS']
 # MY_IP_ADDRESS = ni.ifaddresses('eth0')[ni.AF_INET][0]['addr']
 
-# node_info = [0, MY_ID, MY_IP_ADDRESS]  # seqno, myid, myipaddress
-# neighbor_dict = {}
-# id_ip_dict = {MY_ID : MY_IP_ADDRESS}
+node_info = [0, MY_ID, MY_IP_ADDRESS]  # seqno, myid, myipaddress
+neighbor_dict = {}
+id_ip_dict = {MY_ID : MY_IP_ADDRESS}
 
 
 BCAST_IP_ADDRESS = config.IP['BCAST_IP_ADDRESS']
