@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "broadcast-address": "^1.0.2",
+    "dgram": "^1.0.1",
+    "ip": "^1.1.8",
+    "serialport": "^11.0.0"
+  },
+  "name": "acm_uvinet",
+  "version": "0.0.2",
+  "description": "acm_uvinet",
+  "main": "acm_uvinet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sudo node acm_uvinet.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
